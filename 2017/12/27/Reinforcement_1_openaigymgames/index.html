@@ -211,19 +211,23 @@ Deep Re">
 <li><code>reward</code></li>
 </ul>
 <ol>
-<li><p>그럼 개발자관점에서 구현을 한다고 가정했을 때, 무엇이 필요한가 생각해보면<br>Actor가 환경에서 어떠한 액션을 취할지에 대한 알고리즘 필요, 선행연구 분석</p>
+<li><p>그럼 개발자관점에서 구현을 한다고 가정했을 때, 무엇이 필요한가 생각해보면<br>Actor가 환경에서 어떠한 액션을 취할지에 대한 알고리즘 필요, 논문 분석</p>
 </li>
 <li><p>환경은 OpenAI GYM FrameWork를 통해 구축</p>
 </li>
 </ol>
 <p>Frozen Lake 란 게임(환경)을 구축하고,<br>어떻게 하면, 보상을 받을지, 즉 게임을 깰지,<br>action 알고리즘을 구성할지 생각해보자.</p>
 <p><img src="https://i.ytimg.com/vi/xgoO54qN4lY/maxresdefault.jpg" alt=""></p>
-<p>액터는 상하좌우를 취할 수 있다.<br>S=Start<br>G=Goal<br>F=Frozen Lake<br>H=Hole</p>
-<p>여기서 주의할 것은 우리가 환경을 만들었음.<br>즉 우리는 답을 안다.딩</p>
-<p>다만 <code>actor</code> 기준으로는 답을 모르게 코딩</p>
-<p>텐서플로는 워낙에 설치방법이 잘 나와있으므로, 생략<br>gym도 리눅스 기준으로 설치</p>
-<p><code>즉 보상이 길면 문제가 생길 수도 있다는 것을 인식. 최근에 많이 연구되고 있음</code><br><u>원대한 목표를 갖되, 짧은 목표를 세우고 행하자~!</u></p>
-<h1 id="DEEP-MIND의-Atari-Breakout-Game-2013-2015"><a href="#DEEP-MIND의-Atari-Breakout-Game-2013-2015" class="headerlink" title="DEEP MIND의 Atari Breakout Game 2013,2015"></a><font color="3c1e1e">DEEP MIND의 Atari Breakout Game 2013,2015</font></h1><p><img src="http://i.telegraph.co.uk/multimedia/archive/02562/atari_2562548b.jpg" alt=""><br><u>(구글에 atari breakout 검색해보세요…구글이 더대단한 듯)</u><br>Atari 적용된 알고리즘으로, 다른 게임(옛날 오락실게임-&gt; 좌우상 같이 액션을 많이 취할 수 있는 게임)에도 적용가능.<br>많은 게임에서 사람보다 잘함.</p>
+<p><code>환경</code><br>오른쪽 그림</p>
+<p><code>액터</code>는 상하좌우(<code>action</code>)를 취할 수 있다.<br>S=Start<br>G=Goal<br>F=Frozen Lake<br>H=Hole</p>
+<p><code>state</code><br>0,1,2,3<br>4,5,6,7<br>8,9,10,11<br>12,13,14,15</p>
+<p><code>reward</code><br><u>G에 도착했을 때만, reward 1</u><br>그 외의 곳은, reward 0</p>
+<p>(1) 액션을 취하면, 그에 따른 , state 변경, reward받음<br>ex)시작지점에서, 오른쪽으로 액션<br>그에 따라서<br><code>state</code> 0-&gt;1<br><code>reward</code> 0-&gt;0</p>
+<h1 id="Development"><a href="#Development" class="headerlink" title="Development"></a><font color="3c1e1e">Development</font></h1><p>텐서플로는 워낙에 설치방법이 잘 나와있으므로, 생략<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow-gpu</span><br></pre></td></tr></table></figure></p>
+<p>gym도 생략<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gym</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import gym</span><br><span class="line">env = gym.make(&quot;FrozenLake-v0&quot;) # 오른쪽 그림과 같은 환경. 여러가지 환경 존재</span><br><span class="line">state = env.reset() # 환경 초기화 했을 때의 state</span><br><span class="line">for _ in range(1000):</span><br><span class="line">   env.render() #gym function, enviroment 내 state 가시화, terminal 로만 가능</span><br><span class="line">   action = env.action_space.sample() #action algorithm define</span><br><span class="line">   state, reward, done, info = env.step(action) #환경에서 액션하고, 그에 따른, state, reward 얻기, done은 죽었나살았나의 정보, info는 추가적인 정보</span><br></pre></td></tr></table></figure>
+<p>여기서 주의할 것은 우리가 환경을 만들었음.<br>즉 우리는 답을 안다.</p>
+<p>다만 <code>actor</code> 기준으로는 답을 모르게 코딩해야함.</p>
 
 
                 
