@@ -10,6 +10,13 @@
 
     <!--Description-->
     
+        <meta name="description" content="References Book
+모두를 위한 머신러닝/딥러닝강의
+Awesome Reinforcement Learning
+Simple Reinforcement Learning with TensorFlow
+written by ahigh school student
+Deep Re">
+    
 
     <!--Author-->
     
@@ -18,7 +25,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="reinforcement1_2_openaigymgames"/>
+        <meta property="og:title" content="Reinforcement 1 - (2) - Playing OpenAI GYM Games"/>
     
 
     <!--Open Graph Description-->
@@ -40,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>reinforcement1_2_openaigymgames - SHRM Deep Team</title>
+    <title>Reinforcement 1 - (2) - Playing OpenAI GYM Games - SHRM Deep Team</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -134,7 +141,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>reinforcement1_2_openaigymgames</h1>
+                    <h1>Reinforcement 1 - (2) - Playing OpenAI GYM Games</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -156,13 +163,72 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/reinforcement-1/">#reinforcement 1</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <h2 id="References-Book"><a href="#References-Book" class="headerlink" title="References Book"></a>References Book</h2><ul>
+<li><a href="http://hunkim.github.io/ml/" target="_blank" rel="noopener"><h2>모두를 위한 머신러닝/딥러닝강의</h2></a></li>
+<li><a href="http://aikorea.org/awesome-rl/" target="_blank" rel="noopener">Awesome Reinforcement Learning</a></li>
+<li><a href="https://medium.com/emergent-future/" target="_blank" rel="noopener">Simple Reinforcement Learning with TensorFlow</a></li>
+<li><a href="http://kvfrans.com/simple-algoritms-for-solving-cartpole/" target="_blank" rel="noopener">written by ahigh school student</a></li>
+<li><a href="http://karpathy.github.io/2016/05/31/rl/" target="_blank" rel="noopener">Deep Reinforcement Learning: Pong from Pixels - Andrej Karpathy blog</a></li>
+<li>Machine Learning, Tom Mitchell, 1997</li>
+<li><a href="http://rll.berkeley.edu/" target="_blank" rel="noopener">CS 294: Deep Reinforcement Learning, Spring 2017</a></li>
+<li><a href="https://www.gitbook.com/book/dnddnjs/rl/details" target="_blank" rel="noopener">Fundamental of Reinforcement Learning</a></li>
+</ul>
+<h2 id="References-Online-Courses"><a href="#References-Online-Courses" class="headerlink" title="References Online Courses"></a>References Online Courses</h2><ul>
+<li><a href="https://simons.berkeley.edu/talks/tutorialreinforcement-learning" target="_blank" rel="noopener">A Tutorial on Reinforcement Learning, 2017</a></li>
+<li><a href="http://rll.berkeley.edu/deeprlcourse/" target="_blank" rel="noopener">Berkeley CS 294: Deep Reinforcement Learning, Spring 2017</a></li>
+<li><a href="http://selfdrivingcars.mit.edu/" target="_blank" rel="noopener">MIT 6.S094: Deep Learning for Self-Driving Cars (Lecture 2),2017</a></li>
+<li><a href="https://www.youtube.com/watch?v=PtAIh9KSnjo&amp;t=2457s" target="_blank" rel="noopener">Deep Reinforcement Learning (John Schulman, OpenAI)(summary)</a></li>
+<li><a href="https://www.youtube.com/watch?v=aUrX-rP_ss4&amp;list=PLjKEIQlKCTZYN3CYBlj8r58SbNorobqcp" target="_blank" rel="noopener">Deep Reinforcement Learning (John Schulman, OpenAI)(4lecures)</a></li>
+<li><a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html" target="_blank" rel="noopener">UCL, David Silver, Reinforcement Learning,2017</a></li>
+<li><a href="https://www.youtube.com/watch?v=RtxI449ZjSc" target="_blank" rel="noopener">Stanford Andrew Ng CS229 Lecture 16,2008</a></li>
+</ul>
+<p><br><br></p>
+<h1 id="Playing-OpenAI-GYM-Games"><a href="#Playing-OpenAI-GYM-Games" class="headerlink" title="Playing OpenAI GYM Games"></a>Playing OpenAI GYM Games</h1><ul>
+<li><code>actor</code></li>
+<li><code>enviroment</code></li>
+<li><code>action</code></li>
+<li><code>state</code></li>
+<li><code>reward</code></li>
+</ul>
+<ol>
+<li><p>그럼 개발자관점에서 구현을 한다고 가정했을 때, 무엇이 필요한가 생각해보면<br>Actor가 환경에서 어떠한 액션을 취할지에 대한 알고리즘 필요, 논문 분석</p>
+</li>
+<li><p>환경은 OpenAI GYM FrameWork를 통해 구축</p>
+</li>
+</ol>
+<p>Frozen Lake 란 게임(환경)을 구축하고,<br>어떻게 하면, 보상을 받을지, 즉 게임을 깰지,<br>action 알고리즘을 구성할지 생각해보자.</p>
+<p><img src="https://i.ytimg.com/vi/xgoO54qN4lY/maxresdefault.jpg" alt=""></p>
+<p><code>환경</code><br>오른쪽 그림</p>
+<p><code>액터</code>는 상하좌우(<code>action</code>)를 취할 수 있다.<br>S=Start<br>G=Goal<br>F=Frozen Lake<br>H=Hole</p>
+<p><code>state</code><br>0,1,2,3<br>4,5,6,7<br>8,9,10,11<br>12,13,14,15</p>
+<p><code>reward</code><br><u>G에 도착했을 때만, reward 1</u><br>그 외의 곳은, reward 0</p>
+<p>액션을 취하면, 그에 따른 , state 변경, reward받음<br>ex)시작지점에서, 오른쪽으로 액션<br>그에 따라서<br><code>state</code> 0-&gt;1<br><code>reward</code> 0-&gt;0</p>
+<h1 id="Development"><a href="#Development" class="headerlink" title="Development"></a><font color="3c1e1e">Development</font></h1><p>텐서플로는 워낙에 설치방법이 잘 나와있으므로, 생략<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow-gpu</span><br></pre></td></tr></table></figure></p>
+<p>gym도 생략<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gym</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import gym</span><br><span class="line">env = gym.make(&quot;FrozenLake-v0&quot;) # 오른쪽 그림과 같은 환경. 여러가지 환경 존재</span><br><span class="line">state = env.reset() # 환경 초기화 했을 때의 state</span><br><span class="line">for _ in range(1000):</span><br><span class="line">   env.render() #gym function, enviroment 내 state 가시화, terminal 로만 가능</span><br><span class="line">   action = env.action_space.sample() #action algorithm define</span><br><span class="line">   state, reward, done, info = env.step(action) #환경에서 액션하고, 그에 따른, state, reward 얻기, done은 죽었나살았나의 정보, info는 추가적인 정보</span><br></pre></td></tr></table></figure>
+<p>여기서 주의할 것은 우리가 환경을 만들었음.<br>즉 우리는 답을 안다.</p>
+<p>다만 <code>actor</code> 기준으로는 답을 모르게 코딩해야함.</p>
+
 
                 
             </div>
